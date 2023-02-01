@@ -5,7 +5,7 @@ import axios from "axios";
 
 function App() {
   const [infos, setInfos] = useState([]);
-  const [auteur, setAuteur] = useState("Journet");
+  const [auteur, setAuteur] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,8 +19,9 @@ function App() {
   }, [auteur]);
 
   return (
-    <div>
+    <div className="body">
       <input
+        className="input"
         type="text"
         onChange={(e) => {
           setAuteur(e.target.value);
@@ -28,16 +29,20 @@ function App() {
       ></input>
       <Fragment>
         {infos != null ? (
-          <ul>
+          <ul className="liste-livre">
             {infos.map((item) => (
-              <li key={item.id}>
+              <li key={item.id} className="livre">
                 {console.log(item)}
-                <p>
-                  {"Auteur : " +
-                    item.volumeInfo.authors +
-                    " /  Titre : " +
-                    item.volumeInfo.title}
-                </p>
+                <p className="titre">{item.volumeInfo.title}</p>
+                {item.volumeInfo.imageLinks != null ? (
+                  <img
+                    className="img"
+                    alt="img-livre"
+                    src={item.volumeInfo.imageLinks.thumbnail}
+                  />
+                ) : (
+                  <h2>Pas d'image disponible</h2>
+                )}
               </li>
             ))}
           </ul>

@@ -1,0 +1,36 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 80%;
+  margin: auto;
+
+  .input {
+    width: 200px;
+    margin: 50px;
+  }
+
+  .liste-livre {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+
+    .livre {
+      width: max-content;
+      display: flex;
+      flex-direction: row-reverse;
+
+      .img {
+        width: 150px;
+        height: 100px;
+      }
+
+      .content-livre {
+        font-size: 17px;
+        margin-left: 15px;
+        width: 150px;
+      }
+    }
+  }
+}

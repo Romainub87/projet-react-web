@@ -6,31 +6,30 @@
   margin: auto;
 }
 
-.input {
+.body .input {
   width: 200px;
   margin: 50px;
 }
 
-
-.liste-livre {
+.body .liste-livre {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   justify-content: space-around;
 }
 
-.livre {
+.body .liste-livre .livre {
   width: max-content;
   display: flex;
   flex-direction: row-reverse;
-
- 
 }
-.img {
+
+.body .liste-livre .livre .img {
   width: 150px;
+  height: 100px;
 }
 
-.titre {
+.body .liste-livre .livre .content-livre {
   font-size: 17px;
   margin-left: 15px;
   width: 150px;

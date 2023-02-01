@@ -7,30 +7,76 @@
 
   .input {
     width: 200px;
-    margin: 50px;
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-right: 25px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .btn-page {
+      margin: 25px;
+      padding: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border: none;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: rgb(88, 87, 87);
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    .disabled {
+      background-color: aliceblue;
+      color: grey;
+
+      &:hover {
+        background-color: aliceblue;
+        color: grey;
+        cursor: auto;
+      }
+    }
   }
 
   .liste-livre {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    justify-content: space-around;
+    padding-left: 0;
+    justify-content: space-between;
 
     .livre {
-      width: max-content;
       display: flex;
       flex-direction: row-reverse;
+      background-color: bisque;
+      padding: 25px;
+      margin: 10px;
+      margin-left: 0;
+      border-radius: 10px;
 
       .img {
-        width: 150px;
-        height: 100px;
+        width: 200px;
+        height: 250px;
       }
 
       .content-livre {
         font-size: 17px;
         margin-left: 15px;
-        width: 150px;
+        width: 200px;
+        height: 250px;
       }
     }
+  }
+
+  .no-livre {
+    margin: 25px;
+    font-size: large;
   }
 }

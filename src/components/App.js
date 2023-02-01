@@ -1,6 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
 import "../style/App.css";
-import { render } from "@testing-library/react";
 import axios from "axios";
 import no_image from "../assets/no-image.png";
 
@@ -85,7 +84,14 @@ function App() {
                     <a href={item.volumeInfo.previewLink}>
                       <p className="titre">{item.volumeInfo.title}</p>
                     </a>
-                    {item.volumeInfo.description != null ? <p className="des"> {item.volumeInfo.description.substr(0, 125) }... </p> : <p>Pas de description</p>}
+                    {item.volumeInfo.description != null ? (
+                      <p className="des">
+                        {" "}
+                        {item.volumeInfo.description.substr(0, 125)}...{" "}
+                      </p>
+                    ) : (
+                      <p>Pas de description</p>
+                    )}
                   </div>
 
                   {item.volumeInfo.imageLinks != null ? (

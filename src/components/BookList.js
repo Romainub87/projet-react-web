@@ -12,7 +12,6 @@ function BookList({ infos, setInfos, auteur, nb }) {
           "&maxResults=9&startIndex=" +
           nb
       );
-
       console.log(result.data.items);
       setInfos(result.data.items);
     };
@@ -29,7 +28,9 @@ function BookList({ infos, setInfos, auteur, nb }) {
                 {console.log(item)}
                 <div className="content-livre">
                   <a href={item.volumeInfo.previewLink}>
-                    <p className="titre">{item.volumeInfo.title.substr(0, 10)}...</p>
+                    <p className="titre">
+                      {item.volumeInfo.title.substr(0, 10)}...
+                    </p>
                   </a>
                   {item.volumeInfo.description != null ? (
                     <p className="des">
@@ -56,7 +57,7 @@ function BookList({ infos, setInfos, auteur, nb }) {
         </div>
       ) : (
         <div className="no-livre">
-            Pas de livre dispo avec l'auteur : {auteur}
+          Pas de livre dispo avec l'auteur : {auteur}
         </div>
       )}
     </Fragment>

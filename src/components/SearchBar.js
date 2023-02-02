@@ -3,7 +3,7 @@ import "../style/SearchBar.css";
 function SearchBar({ setAuteur, setNb, setNbPage }) {
   return (
     <div className="bar">
-      <h1 className="title">API de recherche Google</h1>
+      <h1 className="title">API de recherche Google Books</h1>
       <input
         className="input"
         type="text"

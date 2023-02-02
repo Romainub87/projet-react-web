@@ -14,7 +14,6 @@ function Pagination({ infos, nb, setNb, nbPage, setNbPage }) {
     setNbPage(nbPage + 1);
   }
 
-
   return (
     <Fragment>
       {infos != null ? (
@@ -34,7 +33,9 @@ function Pagination({ infos, nb, setNb, nbPage, setNbPage }) {
               </button>
             )}
             <div className="info-page">
-              <p className="info">[{nb} ... {nb+infos.length}]</p>
+              <p className="info">
+                [{nb} ... {nb + infos.length}]
+              </p>
               <p className="info page">Page {nbPage}</p>
             </div>
             {infos.length === 9 ? (

@@ -56,8 +56,10 @@ function BookList({ infos, setInfos, auteur, nb }) {
           </ul>
         </div>
       ) : (
-        <div className="no-livre">
-          Pas de livre dispo avec l'auteur : {auteur}
+        <div className="content">
+          <div className="no-livre">
+            Pas de livre dispo avec l'auteur : {auteur}
+          </div>
         </div>
       )}
     </Fragment>

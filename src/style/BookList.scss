@@ -1,0 +1,39 @@
+.content {
+    width: 80%;
+    margin: auto;
+    background-color: beige;
+    .liste-livre {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        padding-left: 0;
+        justify-content: space-between;
+
+        .livre {
+            display: flex;
+            flex-direction: row-reverse;
+            
+            padding: 25px;
+            margin: 10px;
+            margin-left: 0;
+            border-radius: 10px;
+
+            .img {
+                width: 100px;
+                height: 150px;
+            }
+
+            .content-livre {
+                font-size: 14px;
+                margin-left: 15px;
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+    .no-livre {
+        width: 100%;
+        margin: 40px;
+        font-size: 20px;
+    }
+}

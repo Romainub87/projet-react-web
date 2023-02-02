@@ -1,0 +1,35 @@
+.pagination {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    background-color: rgb(231, 123, 223);
+    .btn-page {
+        font-size: 17px;
+        margin: 20px;
+        padding: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(231, 123, 223);
+
+        &:hover {
+            background-color: rgb(231, 123, 223);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    .disabled {
+        background-color: rgb(231, 123, 223);
+        color: rgb(88, 86, 86);
+
+        &:hover {
+            background-color: rgb(231, 123, 223);
+            color: rgb(88, 86, 86);
+            cursor: auto;
+            text-decoration: none;
+        }
+    }
+}

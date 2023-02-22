@@ -20,7 +20,7 @@ function Book(props) {
                   )}
                </div>
                { props.image !== null ?
-                <img src={props.image} alt="img" width="100" /> 
+                <img src={props.image} alt="image" width="100" /> 
                : 
                 <img src={no_image} alt="no-image" width="100"/>
                }

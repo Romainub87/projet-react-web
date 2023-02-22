@@ -2,6 +2,7 @@ import { Fragment, useEffect } from "react";
 import axios from "axios";
 import no_image from "../assets/no-image.png";
 import "../style/BookList.css";
+import Book from "./Book";
 
 function BookList({ infos, setInfos, auteur, nb }) {
   useEffect(() => {
@@ -26,21 +27,12 @@ function BookList({ infos, setInfos, auteur, nb }) {
             {infos.map((item) => (
               <li key={item.id} className="livre">
                 {console.log(item)}
-                <div className="content-livre">
-                  <a href={item.volumeInfo.previewLink}>
-                    <p className="titre">
-                      {item.volumeInfo.title.substr(0, 10)}...
-                    </p>
-                  </a>
-                  {item.volumeInfo.description != null ? (
-                    <p className="des">
-                      {" "}
-                      {item.volumeInfo.description.substr(0, 100)}...{" "}
-                    </p>
-                  ) : (
-                    <p>Pas de description</p>
-                  )}
-                </div>
+                <Book 
+                lien={item.volumeInfo.previewLink} 
+                titre={item.volumeInfo.title}
+                description={item.volumeInfo.description}
+                image={item.volumeInfo.imageLinks} />
+               
 
                 {item.volumeInfo.imageLinks != null ? (
                   <img

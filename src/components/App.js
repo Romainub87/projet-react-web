@@ -12,13 +12,14 @@ function App() {
   return (
     <div className="body">
       <SearchBar setNb={setNb} setNbPage={setNbPage} setAuteur={setAuteur} />
+      { auteur !== "" ? 
       <BookList
         infos={infos}
         setInfos={setInfos}
         auteur={auteur}
         nb={nb}
         setNb={setNb}
-      />
+      /> : null }
       <Pagination
         nb={nb}
         setNb={setNb}

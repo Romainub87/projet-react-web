@@ -1,7 +1,8 @@
-name: learn-github-actions
-on: [push]
+name: hello-world
+on: push
 jobs:
-  check-bats-version:
+  my-job:
     runs-on: self-hosted
     steps:
-      run: echo "Hello World ! "
+      - name: my-step
+        run: echo "Hello World!

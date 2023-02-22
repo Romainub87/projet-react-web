@@ -1,6 +1,5 @@
 import { Fragment, useEffect } from "react";
 import axios from "axios";
-import no_image from "../assets/no-image.png";
 import "../style/BookList.css";
 import Book from "./Book";
 

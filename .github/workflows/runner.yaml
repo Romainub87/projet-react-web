@@ -4,4 +4,4 @@ jobs:
   check-bats-version:
     runs-on: self-hosted
     steps:
-      echo "Hello World ! "
+      run: echo "Hello World ! "

@@ -22,7 +22,7 @@ function Book(props) {
                { props.image !== null ?
                 <img src={props.image} alt="image-livre" width="100" /> 
                : 
-                <img src={no_image} alt="image-livre" width="100"/>
+                <img src={no_image} alt="no-image-livre" width="100"/>
                }
         </Fragment>
     )

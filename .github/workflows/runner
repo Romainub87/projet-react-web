@@ -1,25 +1,9 @@
-name: Deploy
-
-on:
-  push:
-    branches: [master]
-
+name: learn-github-actions
+on: [push]
 jobs:
-  deploy:
+  check-bats-version:
     runs-on: self-hosted
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-
-      - name: Install deps and build (with cache)
-        uses: bahmutov/npm-install@v1
-
-      - name: Build
-        run: yarn build && PREFIX=true yarn --cwd website build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: fpx4rVCnpvg0mcZimqHplC9dwA45m82Hml5SBKUDrpc
-          publish_dir: ./website/build
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      echo "Hello World ! "

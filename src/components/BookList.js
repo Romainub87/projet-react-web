@@ -26,23 +26,20 @@ function BookList({ infos, setInfos, auteur, nb }) {
           <ul className="liste-livre">
             {infos.map((item) => (
               <li key={item.id} className="livre">
-                {console.log(item)}
+                {item.volumeInfo.imageLinks != null ? (
                 <Book 
                 lien={item.volumeInfo.previewLink} 
                 titre={item.volumeInfo.title}
                 description={item.volumeInfo.description}
-                image={item.volumeInfo.imageLinks} />
-               
-
-                {item.volumeInfo.imageLinks != null ? (
-                  <img
-                    className="img"
-                    alt="img-livre"
-                    src={item.volumeInfo.imageLinks.thumbnail}
-                  />
-                ) : (
-                  <img className="img" alt="img-livre" src={no_image} />
+                image={item.volumeInfo.imageLinks.thumbnail} />)
+                 : (
+                  <Book 
+                lien={item.volumeInfo.previewLink} 
+                titre={item.volumeInfo.title}
+                description={item.volumeInfo.description}
+                image={null} />
                 )}
+
               </li>
             ))}
           </ul>

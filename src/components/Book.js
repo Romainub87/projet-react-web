@@ -19,8 +19,11 @@ function Book(props) {
                     <p>Pas de description</p>
                   )}
                </div>
-            
-            
+               { props.image !== null ?
+                <img src={props.image} alt="image-livre" width="100" /> 
+               : 
+                <img src={no_image} alt="image-livre" width="100"/>
+               }
         </Fragment>
     )
 }

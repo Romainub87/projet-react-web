@@ -6,9 +6,10 @@ function Book(props) {
         <Fragment>
              <div className="content-livre">
                   <a href={props.lien}>
+                    { props.titre != null ? (
                     <p className="titre">
                       {props.titre.substr(0, 10)}...
-                    </p>
+                    </p>) : <p>Pas de titre</p> }
                   </a>
                   {props.description != null ? (
                     <p className="des">

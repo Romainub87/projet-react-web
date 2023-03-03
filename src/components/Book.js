@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import { Fragment } from "react";
 import no_image from "../assets/no-image.png";
 
